@@ -44,4 +44,14 @@ R-scripts &amp; ImageJ macros used in the manuscript "Structural studies of huma
 * emission slit width (nm) = 6, 6
 
 >*ImageJ Macro scripts for cell studies (mitochondrial morphology & colocalization analysis)*:
+1. splitchannel_4.ijm
+* ImageJ macro that takes a .ND2 file, opens it and splits it into 4 individual channel folers
+2. GenFramesMaxProjs_3channel.ijm
+* ImageJ macro that creates maximum intensity z projection images from all images in a specific folder and creates a single stack of those images
+3. CropCells_1500_ROI_no_noise_3channel.ijm
+* ImageJ macro that uses ROIs traced on the MaxProjs.tif stack and single cell cropped TIFF files
+4. Coloc2_batch_ch2vsch3.ijm
+* Imagee macro that uses single cell cropped TIFF files for colocalization analysis using the Coloc2 module on ImageJ. 
+5. megan-directory-split-join
+* command envoked on terminal to split a large data set into identically sized folders to make downstream analysis quicker
 
