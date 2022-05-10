@@ -33,3 +33,13 @@ R-scripts &amp; ImageJ macros used in the manuscript "Structural studies of huma
 * mouse_ref = 1IYG = N-arm in
 * human_ref = 1PC2 = N-arm out
 
+7. TRP_fluorescence.R
+* TRP fluorescence of nativeN- and dN- hFis1
+* [nativeN- or dN-hFis1] = 10 µM
+* Low Salt Buffer: 50 mM HEPES pH 7.4, 0.2 M NaCl
+* High Salt Buffer: 50 mM HEPES pH 7.4, 2 M NaCl
+* TRP excitation = 295 nm
+* emission = 300 - 400nm
+* excitation slit width (nm) = 4, 4
+* emission slit width (nm) = 6, 6
+
