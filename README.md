@@ -29,8 +29,7 @@ R-scripts &amp; ImageJ macros used in the manuscript "Structural studies of huma
 * GROMACS
 
 6. Talos_predication_analysis.R
-# Comparing ramachandran angles of hFis1 from experimental HEPES condition
-# against NMR solution structures of N-arm in (1IYG) and out (1PC2)
-# mouse_ref = 1IYG = N-arm in
-# human_ref = 1PC2 = N-arm out
+* Comparing ramachandran angles of hFis1 from experimental HEPES condition against NMR solution structures of N-arm in (1IYG) and out (1PC2)
+* mouse_ref = 1IYG = N-arm in
+* human_ref = 1PC2 = N-arm out
 
