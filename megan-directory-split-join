@@ -1,0 +1,40 @@
+#!/bin/bash
+
+
+if [[ $# -ne 2 ]] ; then
+  echo "Requires [dir_name] [count]"
+  exit 1
+fi
+
+dir_name=$1
+
+if [[ "$2" = "JOIN" ]] ; then
+  find . -type d -iname "$dir_name*" | \
+    xargs -n1 bash -c 'mv $0/* .;rmdir $0 &>/dev/null'
+  exit 0
+fi
+
+search=*.tif
+dir_size=$(($2))
+if [[ $dir_size -lt 2 ]] ; then
+  echo "[dir_size] must be >= 2"
+  exit 1
+fi
+
+existing=$((`find . -maxdepth 1 -type d -name "$dir_name*" | wc -l`))
+
+if [[ $existing -ne 0 ]] ; then
+  echo "Existing split directories found, exiting…"
+  exit 1
+fi
+
+n=$((`find . -maxdepth 1 -type f -iname "$search" | wc -l`/$dir_size+1))
+echo "Creating $n folders called $dir_name"
+for i in `seq 1 $n`;
+do
+    mkdir -p "$dir_name$i";
+    find . -maxdepth 1 -type f -iname "$search" | \
+      sort | \
+      head -n $dir_size | \
+      xargs -n1 -J {} mv {} "$dir_name$i"
+done
