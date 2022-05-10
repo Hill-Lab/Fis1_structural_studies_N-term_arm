@@ -2,7 +2,7 @@
 R-scripts &amp; ImageJ macros used in the manuscript "Structural studies of human Fis1 reveals a dynamic region important for Drp1 recruitment and mitochondrial fission"
 
 >*R-scripts for structural studies*:
-1. CS_difference_2_structures.R
+1. *CS_difference_2_structures.R*
 * Computing chemical shift differences between experimental HEPES & 1PC2
 
 2. hetNOE_analysis.R 
@@ -19,5 +19,12 @@ R-scripts &amp; ImageJ macros used in the manuscript "Structural studies of huma
 * temperature, pressure, and density of system for
 * experiment = 100-ns 1PC2_121SKY, tr1
 * force field = AMBER99SB
+* GROMACS
+
+5. MD_sparta_prediction_analysis
+* Chemical shift predictions (Sparta+) of MD simulations
+* experiment = 100-ns 1IYG_121SKY, tr1
+* force field = AMBER99SB
+* MD simulation time = 100 ns
 * GROMACS
 
