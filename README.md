@@ -1,7 +1,7 @@
 # Fis1 structural studies N-term arm scripts
 R-scripts &amp; ImageJ macros used in the manuscript "Structural studies of human Fis1 reveals a dynamic region important for Drp1 recruitment and mitochondrial fission"
 
->*R-scripts for structural studies*:
+**R-scripts for structural studies**:
 1. CS_difference_2_structures.R
 * Computing chemical shift differences between experimental HEPES & 1PC2
 
@@ -43,7 +43,9 @@ R-scripts &amp; ImageJ macros used in the manuscript "Structural studies of huma
 * excitation slit width (nm) = 4, 4
 * emission slit width (nm) = 6, 6
 
->*ImageJ Macro scripts for cell studies (mitochondrial morphology & colocalization analysis)*:
+**ImageJ Macro scripts for cell studies (mitochondrial morphology & colocalization analysis):**
+
+**see <a href="https://github.com/Hill-Lab/MitoGraph-Contrib-RScripts">MitoGraph R-scripts</a>, <a href="https://github.com/vianamp/MitoGraph">MitoGraph v3.0</a> and our previously published paper <a href="https://www.sciencedirect.com/science/article/pii/S0003269718301921?via%3Dihub">"Methods for imaging mammalian mitochondrial morphology: A prospective on MitoGraph"</a> for more information on MitoGraph Analysis** 
 1. splitchannel_4.ijm
 * ImageJ macro that takes a .ND2 file, opens it and splits it into 4 individual channel folers
 2. GenFramesMaxProjs_3channel.ijm
