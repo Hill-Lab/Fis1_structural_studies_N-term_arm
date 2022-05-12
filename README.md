@@ -46,14 +46,12 @@ R-scripts &amp; ImageJ macros used in the manuscript "Structural studies of huma
 **ImageJ Macro scripts for cell studies (mitochondrial morphology & colocalization analysis):**
 
 **see <a href="https://github.com/Hill-Lab/MitoGraph-Contrib-RScripts">MitoGraph R-scripts</a>, <a href="https://github.com/vianamp/MitoGraph">MitoGraph v3.0</a> and our previously published paper <a href="https://www.sciencedirect.com/science/article/pii/S0003269718301921?via%3Dihub">"Methods for imaging mammalian mitochondrial morphology: A prospective on MitoGraph"</a> for more information on MitoGraph Analysis** 
-1. splitchannel_4.ijm
-* ImageJ macro that takes a .ND2 file, opens it and splits it into 4 individual channel folers
-2. GenFramesMaxProjs_3channel.ijm
-* ImageJ macro that creates maximum intensity z projection images from all images in a specific folder and creates a single stack of those images
-3. CropCells_1500_ROI_no_noise_3channel.ijm
-* ImageJ macro that uses ROIs traced on the MaxProjs.tif stack and single cell cropped TIFF files
-4. Coloc2_batch_ch2vsch3.ijm
-* Imagee macro that uses single cell cropped TIFF files for colocalization analysis using the Coloc2 module on ImageJ. 
-5. megan-directory-split-join
-* command envoked on terminal to split a large data set into identically sized folders to make downstream analysis quicker
+
+We prepared single cell, single channel TIFF images to be used for MitoGraph or Colocalization analysis using the following ImageJ macros: 
+1. ImageJ macro that takes a Nikon .ND2 file, opens it, splits it into individual channels and saves as TIFF images in individual channel folders (**splitchannel_4.ijm**) 
+2. ImageJ macro that takes the single channel TIFF images created above and creates a single stack of maximum intensity z-projection images of the entire dataset (**GenFramesMaxProjs_3channel.ijm**)
+3. Cellular ROIs are hand traced in ImageJ and then the crop macro uses these ROIs, the MaxProj file from **#2** and the single channel TIFF images created in **#1** to create single cell, single channel all z slices TIFF image that can be uploaded for MitoGraph analysis or processed with ImageJ for Coloc2 analysis (**CropCells_1500_ROI_no_noise_3channel.ijm**)
+4. Single cell/single channel TIFF images were processed for colocalization using the ROIs generated in step 3. Both all z-slices and maxIP projections were used for the analysis (**Coloc2_batch_ch2vsch3.ijm**)
+5. Short command program envoked on terminal to split a large data set into identically sized folders to make downstream upload to our cluster for analysis and to allow for parallel MitoGraph processing. The file is placed into the same folder as the images and run using the following terminal command: ./megan-directory-split-join dN_mitoYFP 25 where the base folder name is first specified followed by how many images in each folder  (**megan-directory-split-join**)
+
 
