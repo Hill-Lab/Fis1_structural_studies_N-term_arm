@@ -56,4 +56,6 @@ We prepared single cell, single channel TIFF images to be used for MitoGraph or 
 6. Upload and submit all folders with the single cell/single channel all-z slices mitochondrial images to our cluster for analysis using the commands found in this text file (**mitographrundNmitoYFP1_1.txt**).
 7. Download resulting MitoGraph files and process with the following R-script that takes .GNET files containing numbered node-node distances and computes a variety of metrics. Note this script differs slights from that originally published in the sources above in that is also calculate, reports and plots the small/repeating noisy pixels/voxels and reports a freqeuency table to help extract those from the dataset (**CreateSummary_width_graph_output.R**). That frequency table is then used to select an ideal cut off point to remove the repeating pixels and then a very similar R script was run to remove the small/highly repetative connected components from the dataset (**CreateSummary_width_graph_output_filtered.R**). 
 8. Using the output summary file generated from the **CreateSummary_width_graph_output_filtered.R** boxplots were created by running an additional R-script (**MitoGraph_simplified_width_filtered.R**). See **MitoGraph_simplified_width_filtered.html** for the compiled output for mitoYFP dataset. 
-
+9. Create graph of Coloc2 results generated using **Coloc2_batch_ch2vsch3.ijm** by running **ImageJ_Pearsons_coeff.R**. See **ImageJ_Pearsons_coeff_Drp1vMito_allz.html** for the compiled output of the mitoYFP/Drp1 coloc2 dataset. 
+10. 
+11. 
