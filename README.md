@@ -2,6 +2,8 @@
 R-scripts &amp; ImageJ macros used in the submitted manuscript "Structural studies of human Fis1 reveals a dynamic region important for Drp1 recruitment and mitochondrial fission"
 
 # **R-scripts for structural studies**:
+Contributed by J. Egner
+
 1. CS_difference_2_structures.R
 * Computing chemical shift differences between experimental HEPES & 1PC2
 
@@ -43,7 +45,9 @@ R-scripts &amp; ImageJ macros used in the submitted manuscript "Structural studi
 * excitation slit width (nm) = 4, 4
 * emission slit width (nm) = 6, 6
 
-# ImageJ Macro scripts for cell studies 
+# ImageJ Macro scripts for cell studies
+Contributed by M.C.Harwig
+
 > Mitochondrial Morphology & Colocalization Analysis:
 
 > For more information on MitoGraph Analysis see:
@@ -57,14 +61,14 @@ R-scripts &amp; ImageJ macros used in the submitted manuscript "Structural studi
 
 3. Cellular ROIs are hand traced in ImageJ and then the crop macro uses these ROIs, the MaxProj file from **#2** and the single channel TIFF images created in **#1** to create single cell, single channel all z slices TIFF image that can be uploaded for MitoGraph analysis or processed with ImageJ for Coloc2 analysis (<a href="https://github.com/Hill-Lab/Fis1_structural_studies_N-term_arm/blob/main/CropCells_1500_ROI_no_noise_3channel.ijm">**CropCells_1500_ROI_no_noise_3channel.ijm**</a>)
 
-4. Single cell/single channel TIFF images were processed for colocalization using the ROIs generated in step 3. Both all z-slices and maxIP projections were used for the analysis (**Coloc2_batch_ch2vsch3.ijm**)
+4. Single cell/single channel TIFF images were processed for colocalization using the ROIs generated in step 3. Both all z-slices and maxIP projections were used for the analysis (<a href="https://github.com/Hill-Lab/Fis1_structural_studies_N-term_arm/blob/main/Coloc2_batch_ch2vsch3.ijm">**Coloc2_batch_ch2vsch3.ijm**</a>)
 
-5. Short command program envoked on terminal to split a large data set into identically sized folders to make downstream upload to our cluster for analysis and to allow for parallel MitoGraph processing. The file is placed into the same folder as the images and run using the following terminal command: ./megan-directory-split-join dN_mitoYFP 25 where the base folder name is first specified followed by how many images in each folder  (**megan-directory-split-join**)
+5. Short command program envoked on terminal to split a large data set into identically sized folders to make downstream upload to our cluster for analysis and to allow for parallel MitoGraph processing. The file is placed into the same folder as the images and run using the following terminal command: ./megan-directory-split-join dN_mitoYFP 25 where the base folder name is first specified followed by how many images in each folder  (<a href="https://github.com/Hill-Lab/Fis1_structural_studies_N-term_arm/blob/main/megan-directory-split-join">**megan-directory-split-join**</a>)
 
-6. Upload and submit all folders with the single cell/single channel all-z slices mitochondrial images to our cluster for analysis using the commands found in this text file (**mitographrundNmitoYFP1_1.txt**).
+6. Upload and submit all folders with the single cell/single channel all-z slices mitochondrial images to our cluster for analysis using the commands found in this text file (<a href="https://github.com/Hill-Lab/Fis1_structural_studies_N-term_arm/blob/main/mitographrundNmitoYFP1_1.txt">**mitographrundNmitoYFP1_1.txt**</a>).
 
-7. Download resulting MitoGraph files and process with the following R-script that takes .GNET files containing numbered node-node distances and computes a variety of metrics. Note this script differs slights from that originally published in the sources above in that is also calculate, reports and plots the small/repeating noisy pixels/voxels and reports a freqeuency table to help extract those from the dataset (**CreateSummary_width_graph_output.R**). That frequency table is then used to select an ideal cut off point to remove the repeating pixels and then a very similar R script was run to remove the small/highly repetative connected components from the dataset (**CreateSummary_width_graph_output_filtered.R**). 
+7. Download resulting MitoGraph files and process with the following R-script that takes .GNET files containing numbered node-node distances and computes a variety of metrics. Note this script differs slights from that originally published in the sources above in that is also calculate, reports and plots the small/repeating noisy pixels/voxels and reports a freqeuency table to help extract those from the dataset (<a href="https://github.com/Hill-Lab/Fis1_structural_studies_N-term_arm/blob/main/CreateSummary_width_graph_output.R">**CreateSummary_width_graph_output.R**</a>). That frequency table is then used to select an ideal cut off point to remove the repeating pixels and then a very similar R script was run to remove the small/highly repetative connected components from the dataset (<a href="https://github.com/Hill-Lab/Fis1_structural_studies_N-term_arm/blob/main/CreateSummary_width_graph_output_filtered.R">**CreateSummary_width_graph_output_filtered.R**</a>). 
 
-8. Using the output summary file generated from the **CreateSummary_width_graph_output_filtered.R** boxplots were created by running an additional R-script (**MitoGraph_simplified_width_filtered.R**). See **MitoGraph_simplified_width_filtered.html** for the compiled output for mitoYFP dataset and **MitoGraph_simplified_width_filtered_YFP-TBC_dataset.html** for the compiled output for the YFP-TBC1D15 dataset. 
+8. Using the output summary file generated from the (<a href="https://github.com/Hill-Lab/Fis1_structural_studies_N-term_arm/blob/main/CreateSummary_width_graph_output_filtered.R">**CreateSummary_width_graph_output_filtered.R**</a>) boxplots were created by running an additional R-script (**MitoGraph_simplified_width_filtered.R**). See **MitoGraph_simplified_width_filtered.html** for the compiled output for mitoYFP dataset and **MitoGraph_simplified_width_filtered_YFP-TBC_dataset.html** for the compiled output for the YFP-TBC1D15 dataset. 
 
 9. Create graph of Coloc2 results generated using **Coloc2_batch_ch2vsch3.ijm** by running **ImageJ_Pearsons_coeff.R**. See **ImageJ_Pearsons_coeff_Drp1vMito_allz.html** for the compiled output of the mitoYFP/Drp1 coloc2 dataset. 
