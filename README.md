@@ -45,6 +45,44 @@ Contributed by J. Egner
 * excitation slit width (nm) = 4, 4
 * emission slit width (nm) = 6, 6
 
+Contributed by K. Nolden
+1. 20220314_pooled_MD_distances.R
+* Replotting atom-atom distances for JE's 1000-ns 1PC2_125SKY and h1IYG
+* with average NMR ensemble distances overlaid on plot
+* pooledtr1, tr2, and tr3
+* force field = AMBER99SB
+* GROMACS
+* Included average atom-distances for 20-ensemble solved hFis1 1PC2 and
+* mFis1 1IYG
+
+2.20211022_Fis1_Fis1dN_CSP_plot.R
+* Reanalyzing Ryan Bonate's CSP data
+* and plotting the CSP plot of Fis1dN-Fis1
+* so that it matches standard style of lab
+* and gradient color scheme of Pymol figure
+* to be incorporated into the JBC manuscript
+
+3. 20211122_spinrelaxation_plotting_R.R
+* 20211122 plotting of spin relaxation data collected on 500 MHz and 600 MHz
+* spectrometers. Plots of R1, R2, NOE, and calculated order parameters by residue.
+
+4. 20200220_TRP_dN_nativeN_acrylamide_D1.R
+* Acrylamide quenching of Trp fluorescence of nativeN and dN-hFis1
+* [nativeN] and [dN] = 10 uM
+* [acrylamide] = 0-500 mM
+* data collected on 20200219
+* Buffer: 20 mM Hepes, 175 mM NaCl, 1 mM DTT, 0.02% NaAz
+* Trp excitation: 295 nm
+* Trp emission collected over: 300-400 nm
+* slit widths set at 2.5 per Dash lab protocol
+
+5. 20210603_pooled.R
+* Plotting Prometheus nanoDSF data which measures intrinsic Trp fluorescence
+* as a function of increasing temperature (20-95C)
+* Data collected on 20210106 and 20210419
+* 3 replicates each with n=3
+* Each replicate corresponds to new protein purification sample
+
 # ImageJ Macro scripts for cell studies
 Contributed by M.C.Harwig
 
