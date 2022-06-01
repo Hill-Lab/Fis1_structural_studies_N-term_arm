@@ -55,7 +55,7 @@ Contributed by K. Nolden
 * Included average atom-distances for 20-ensemble solved hFis1 1PC2 and
 * mFis1 1IYG
 
-2.20211022_Fis1_Fis1dN_CSP_plot.R
+2. 20211022_Fis1_Fis1dN_CSP_plot.R
 * Reanalyzing Ryan Bonate's CSP data
 * and plotting the CSP plot of Fis1dN-Fis1
 * so that it matches standard style of lab
